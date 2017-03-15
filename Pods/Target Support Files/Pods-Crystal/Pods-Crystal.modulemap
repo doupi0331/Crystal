@@ -1,0 +1,6 @@
+framework module Pods_Crystal {
+  umbrella header "Pods-Crystal-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -19,7 +19,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //self.viewDidAppear(animated)
+        
+        let userDefault = UserDefaults.standard
+        let id = userDefault.string(forKey: "id")
+        if id == nil || id == "" {
+            self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
+    
+    @IBAction func logoutPressed(_ sender: Any) {
+        let userDefault = UserDefaults.standard
+        userDefault.setValue("", forKey: "id")
+        self.performSegue(withIdentifier: "loginView", sender: self)
+    }
 
 }
 

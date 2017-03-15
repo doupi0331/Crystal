@@ -1,26 +1,379 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BfU-GL-sLt">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Crystal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crystal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asg-lz-p6L">
+                                <rect key="frame" x="144.5" y="269" width="31" height="30"/>
+                                <state key="normal" title="登出"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKN-ub-xLO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="asg-lz-p6L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yi6-q5-zrO"/>
+                            <constraint firstItem="asg-lz-p6L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iQ7-DP-BrK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Crystal" id="fQh-5y-qgx"/>
+                    <connections>
+                        <segue destination="YsB-Pa-ahF" kind="presentation" identifier="loginView" id="9Nt-7a-wys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-543.77811094452773"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="ouj-f8-ds4">
+            <objects>
+                <viewController id="YsB-Pa-ahF" customClass="LoginVC" customModule="Crystal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4d5-a1-vm9"/>
+                        <viewControllerLayoutGuide type="bottom" id="8gc-U8-dLx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bF6-J8-vN7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登入" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh0-1C-bhP">
+                                <rect key="frame" x="81" y="28" width="158" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="dcY-fV-boA"/>
+                                    <constraint firstAttribute="width" constant="158" id="npq-HC-4j0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-MH-Wod">
+                                <rect key="frame" x="16" y="121" width="288" height="131"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-Ur-5z9">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行動電話：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYF-KW-VsM">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的行動電話" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-fP-nfd">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mpT-z4-oCT">
+                                        <rect key="frame" x="0.0" y="75.5" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAz-kP-XhN">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0LK-Zh-cwg">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x7i-Ur-5z9" firstAttribute="leading" secondItem="iIa-MH-Wod" secondAttribute="leading" id="MwH-Fb-slS"/>
+                                    <constraint firstItem="mpT-z4-oCT" firstAttribute="leading" secondItem="iIa-MH-Wod" secondAttribute="leading" id="WTn-rX-cT6"/>
+                                    <constraint firstAttribute="trailing" secondItem="x7i-Ur-5z9" secondAttribute="trailing" id="vNW-RI-m1u"/>
+                                    <constraint firstAttribute="trailing" secondItem="mpT-z4-oCT" secondAttribute="trailing" id="wHQ-VZ-udu"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WGR-0L-TWB">
+                                <rect key="frame" x="30" y="277" width="260" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF4-ti-qCv">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="Dpg-Ku-T84"/>
+                                            <constraint firstAttribute="height" constant="30" id="y8F-rf-VOG"/>
+                                        </constraints>
+                                        <state key="normal" title="登入">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="YsB-Pa-ahF" eventType="touchUpInside" id="Nzn-cj-PXP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZJ-xA-HG1">
+                                        <rect key="frame" x="0.0" y="40" width="260" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.65860916468176145" blue="0.080936109332185202" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gQq-2r-LsO"/>
+                                            <constraint firstAttribute="width" constant="260" id="i55-t9-QoR"/>
+                                        </constraints>
+                                        <state key="normal" title="註冊">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Xbh-at-eQP" kind="presentation" identifier="registerView" id="ODl-5X-cyv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zh0-1C-bhP" firstAttribute="top" secondItem="4d5-a1-vm9" secondAttribute="bottom" constant="8" id="Ask-5m-uV8"/>
+                            <constraint firstItem="WGR-0L-TWB" firstAttribute="top" secondItem="iIa-MH-Wod" secondAttribute="bottom" constant="25" id="Jbr-fr-02D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iIa-MH-Wod" secondAttribute="trailing" id="XwJ-6X-ZN0"/>
+                            <constraint firstItem="iIa-MH-Wod" firstAttribute="leading" secondItem="bF6-J8-vN7" secondAttribute="leadingMargin" id="YkC-nd-RAb"/>
+                            <constraint firstItem="WGR-0L-TWB" firstAttribute="centerX" secondItem="bF6-J8-vN7" secondAttribute="centerX" id="pLs-xe-dmD"/>
+                            <constraint firstItem="Zh0-1C-bhP" firstAttribute="centerX" secondItem="bF6-J8-vN7" secondAttribute="centerX" id="xXS-qS-dNY"/>
+                            <constraint firstItem="iIa-MH-Wod" firstAttribute="top" secondItem="Zh0-1C-bhP" secondAttribute="bottom" constant="22" id="xiA-5L-TDs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTxt" destination="0LK-Zh-cwg" id="4BO-CD-1Qr"/>
+                        <outlet property="phoneTxt" destination="dq6-fP-nfd" id="Jsz-ek-By3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBV-Hf-Tiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726.875" y="-544.0140845070423"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="jld-0e-2Qw">
+            <objects>
+                <viewController id="Xbh-at-eQP" customClass="RegisterVC" customModule="Crystal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gzo-dJ-age"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkm-pO-8KG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dwE-td-J3J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="註冊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYC-tq-2dd">
+                                <rect key="frame" x="81" y="20" width="158" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KAI-h4-kRl"/>
+                                    <constraint firstAttribute="width" constant="158" id="fJk-bn-LyC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-17-AqW">
+                                <rect key="frame" x="16" y="85" width="288" height="383"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-Ge-Teh">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjr-ze-rkN">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的姓" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTN-9w-Esx">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="orR-jY-i2j">
+                                        <rect key="frame" x="0.0" y="65.5" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w4-Cd-7bI">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的名字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-8n-YFe">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gnq-ol-kJk">
+                                        <rect key="frame" x="0.0" y="131" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行動電話：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9j-L9-DZM">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的手機號碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-h9-Agg">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xnA-wz-Tj1">
+                                        <rect key="frame" x="0.0" y="196.5" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8a-jl-Kw5">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請選擇您的生日" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWS-5Z-aqu">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gl2-cm-V8e">
+                                        <rect key="frame" x="0.0" y="262" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgl-36-yr9">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3k-1g-bEI">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ua8-R8-qCr">
+                                        <rect key="frame" x="0.0" y="327.5" width="288" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="確認密碼：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49u-dA-t3T">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="12" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請再次輸入您的密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zR-El-hWC">
+                                                <rect key="frame" x="0.0" y="25.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="orR-jY-i2j" secondAttribute="trailing" id="3yN-jd-qUC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ua8-R8-qCr" secondAttribute="trailing" id="4qp-tD-3aN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gl2-cm-V8e" secondAttribute="trailing" id="6ud-L3-mbm"/>
+                                    <constraint firstAttribute="trailing" secondItem="XY2-Ge-Teh" secondAttribute="trailing" id="J8f-vF-A03"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gnq-ol-kJk" secondAttribute="trailing" id="Kvb-yi-v4Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="xnA-wz-Tj1" secondAttribute="trailing" id="Pal-6B-aqL"/>
+                                    <constraint firstItem="ua8-R8-qCr" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="Q1g-8E-sd4"/>
+                                    <constraint firstItem="orR-jY-i2j" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="Ssu-O1-nHu"/>
+                                    <constraint firstItem="Gl2-cm-V8e" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="VIy-Oj-lZB"/>
+                                    <constraint firstItem="XY2-Ge-Teh" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="YPg-O8-qev"/>
+                                    <constraint firstItem="Gnq-ol-kJk" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="arC-uW-sKt"/>
+                                    <constraint firstItem="xnA-wz-Tj1" firstAttribute="leading" secondItem="AVJ-17-AqW" secondAttribute="leading" id="xez-xX-e7t"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-VK-0jq">
+                                <rect key="frame" x="24" y="478" width="272" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-5D-Xkf">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.65860916469999997" blue="0.080936109330000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="送出">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitPressed:" destination="Xbh-at-eQP" eventType="touchUpInside" id="GLB-UO-mwr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMa-Wg-h6g">
+                                        <rect key="frame" x="0.0" y="40" width="272" height="30"/>
+                                        <state key="normal" title="取消"/>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="Xbh-at-eQP" eventType="touchUpInside" id="wRJ-Dr-h4T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oYC-tq-2dd" firstAttribute="top" secondItem="Gzo-dJ-age" secondAttribute="bottom" id="9Al-KK-WCE"/>
+                            <constraint firstItem="cpA-VK-0jq" firstAttribute="top" secondItem="AVJ-17-AqW" secondAttribute="bottom" constant="10" id="G9B-7J-CnS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AVJ-17-AqW" secondAttribute="trailing" id="MOM-P4-1hN"/>
+                            <constraint firstItem="AVJ-17-AqW" firstAttribute="leading" secondItem="dwE-td-J3J" secondAttribute="leadingMargin" id="Oqr-zf-iPO"/>
+                            <constraint firstItem="AVJ-17-AqW" firstAttribute="top" secondItem="oYC-tq-2dd" secondAttribute="bottom" constant="5" id="P5D-aA-YrM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cpA-VK-0jq" secondAttribute="trailing" constant="8" id="Tlo-L9-zHk"/>
+                            <constraint firstItem="cpA-VK-0jq" firstAttribute="leading" secondItem="dwE-td-J3J" secondAttribute="leadingMargin" constant="8" id="Z1b-Gu-hAU"/>
+                            <constraint firstItem="oYC-tq-2dd" firstAttribute="centerX" secondItem="dwE-td-J3J" secondAttribute="centerX" id="kS5-xz-Cc7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdateTxt" destination="jWS-5Z-aqu" id="fTi-zM-FaZ"/>
+                        <outlet property="firstNameTxt" destination="Bxc-8n-YFe" id="AeH-jR-BgT"/>
+                        <outlet property="lastNameTxt" destination="cTN-9w-Esx" id="SEw-q1-wBn"/>
+                        <outlet property="passConfirmTxt" destination="8zR-El-hWC" id="zN0-jJ-HlR"/>
+                        <outlet property="passwordTxt" destination="O3k-1g-bEI" id="f0L-LT-JFC"/>
+                        <outlet property="phoneTxt" destination="EMw-h9-Agg" id="Oqd-Xc-rJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VI-ea-qRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465.625" y="-547.18309859154931"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dic-0R-OvR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BfU-GL-sLt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QpS-37-y0b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="30m-uy-pA8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIo-j2-LCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>

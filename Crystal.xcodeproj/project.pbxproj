@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206897382E20BD35ACE5619D /* Pods_Crystal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75B592C275652296A74C052 /* Pods_Crystal.framework */; };
+		2F560CF81E76798A00AA3633 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F560CF71E76798A00AA3633 /* Member.swift */; };
+		2F560CFB1E767DD600AA3633 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F560CFA1E767DD600AA3633 /* Constants.swift */; };
 		2F9D92F01E72A17E00835FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D92EF1E72A17E00835FAA /* AppDelegate.swift */; };
 		2F9D92F21E72A17E00835FAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D92F11E72A17E00835FAA /* ViewController.swift */; };
 		2F9D92F51E72A17E00835FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9D92F31E72A17E00835FAA /* Main.storyboard */; };
 		2F9D92F71E72A17E00835FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9D92F61E72A17E00835FAA /* Assets.xcassets */; };
 		2F9D92FA1E72A17E00835FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9D92F81E72A17E00835FAA /* LaunchScreen.storyboard */; };
+		2FE6B9E21E752E8F009AF030 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B9E11E752E8F009AF030 /* LoginVC.swift */; };
+		2FE6B9E41E752EB7009AF030 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B9E31E752EB7009AF030 /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F560CF71E76798A00AA3633 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		2F560CFA1E767DD600AA3633 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F9D92EC1E72A17E00835FAA /* Crystal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crystal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9D92EF1E72A17E00835FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9D92F11E72A17E00835FAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,11 @@
 		2F9D92F61E72A17E00835FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9D92F91E72A17E00835FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F9D92FB1E72A17E00835FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FE6B9E11E752E8F009AF030 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2FE6B9E31E752EB7009AF030 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		BF10AA1BE8315E19F027627E /* Pods-Crystal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crystal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crystal/Pods-Crystal.debug.xcconfig"; sourceTree = "<group>"; };
+		C0500CF9C6CBFD99B54D3C20 /* Pods-Crystal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crystal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crystal/Pods-Crystal.release.xcconfig"; sourceTree = "<group>"; };
+		D75B592C275652296A74C052 /* Pods_Crystal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crystal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206897382E20BD35ACE5619D /* Pods_Crystal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1403E56ADF9B3E94EFA04677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D75B592C275652296A74C052 /* Pods_Crystal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F560CF91E767DB400AA3633 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2F560CFA1E767DD600AA3633 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		2F9D92E31E72A17E00835FAA = {
 			isa = PBXGroup;
 			children = (
 				2F9D92EE1E72A17E00835FAA /* Crystal */,
 				2F9D92ED1E72A17E00835FAA /* Products */,
+				8EFF528DB4AA0642F4349683 /* Pods */,
+				1403E56ADF9B3E94EFA04677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +85,51 @@
 		2F9D92EE1E72A17E00835FAA /* Crystal */ = {
 			isa = PBXGroup;
 			children = (
+				2FE6B9DE1E752E36009AF030 /* Models */,
+				2FE6B9DF1E752E3F009AF030 /* Views */,
+				2FE6B9E01E752E61009AF030 /* Controllers */,
+				2F560CF91E767DB400AA3633 /* Util */,
 				2F9D92EF1E72A17E00835FAA /* AppDelegate.swift */,
-				2F9D92F11E72A17E00835FAA /* ViewController.swift */,
 				2F9D92F31E72A17E00835FAA /* Main.storyboard */,
 				2F9D92F61E72A17E00835FAA /* Assets.xcassets */,
 				2F9D92F81E72A17E00835FAA /* LaunchScreen.storyboard */,
 				2F9D92FB1E72A17E00835FAA /* Info.plist */,
 			);
 			path = Crystal;
+			sourceTree = "<group>";
+		};
+		2FE6B9DE1E752E36009AF030 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F560CF71E76798A00AA3633 /* Member.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2FE6B9DF1E752E3F009AF030 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2FE6B9E01E752E61009AF030 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F9D92F11E72A17E00835FAA /* ViewController.swift */,
+				2FE6B9E11E752E8F009AF030 /* LoginVC.swift */,
+				2FE6B9E31E752EB7009AF030 /* RegisterVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8EFF528DB4AA0642F4349683 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF10AA1BE8315E19F027627E /* Pods-Crystal.debug.xcconfig */,
+				C0500CF9C6CBFD99B54D3C20 /* Pods-Crystal.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9D92FE1E72A17E00835FAA /* Build configuration list for PBXNativeTarget "Crystal" */;
 			buildPhases = (
+				A62570F017C987A29E7C0C59 /* [CP] Check Pods Manifest.lock */,
 				2F9D92E81E72A17E00835FAA /* Sources */,
 				2F9D92E91E72A17E00835FAA /* Frameworks */,
 				2F9D92EA1E72A17E00835FAA /* Resources */,
+				77541A054EE5538E4561791B /* [CP] Embed Pods Frameworks */,
+				7CEFF0DFA604C333F12331CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +203,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77541A054EE5538E4561791B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crystal/Pods-Crystal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CEFF0DFA604C333F12331CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crystal/Pods-Crystal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62570F017C987A29E7C0C59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F9D92E81E72A17E00835FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2F9D92F21E72A17E00835FAA /* ViewController.swift in Sources */,
+				2FE6B9E41E752EB7009AF030 /* RegisterVC.swift in Sources */,
 				2F9D92F01E72A17E00835FAA /* AppDelegate.swift in Sources */,
+				2FE6B9E21E752E8F009AF030 /* LoginVC.swift in Sources */,
+				2F560CF81E76798A00AA3633 /* Member.swift in Sources */,
+				2F560CFB1E767DD600AA3633 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +380,12 @@
 		};
 		2F9D92FF1E72A17E00835FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF10AA1BE8315E19F027627E /* Pods-Crystal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 328Y89B4S9;
 				INFOPLIST_FILE = Crystal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doupi0331.Crystal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,10 +395,12 @@
 		};
 		2F9D93001E72A17E00835FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0500CF9C6CBFD99B54D3C20 /* Pods-Crystal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 328Y89B4S9;
 				INFOPLIST_FILE = Crystal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doupi0331.Crystal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +427,7 @@
 				2F9D93001E72A17E00835FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
