@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		206897382E20BD35ACE5619D /* Pods_Crystal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75B592C275652296A74C052 /* Pods_Crystal.framework */; };
+		2F1D1A511E8174BF007D270F /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D1A501E8174BF007D270F /* LoadingVC.swift */; };
+		2F31D0BC1E7FCB5600D247AB /* MemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F31D0BB1E7FCB5600D247AB /* MemberVC.swift */; };
 		2F560CF81E76798A00AA3633 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F560CF71E76798A00AA3633 /* Member.swift */; };
 		2F560CFB1E767DD600AA3633 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F560CFA1E767DD600AA3633 /* Constants.swift */; };
 		2F9D92F01E72A17E00835FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D92EF1E72A17E00835FAA /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F1D1A501E8174BF007D270F /* LoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		2F31D0BB1E7FCB5600D247AB /* MemberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberVC.swift; sourceTree = "<group>"; };
 		2F560CF71E76798A00AA3633 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		2F560CFA1E767DD600AA3633 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F9D92EC1E72A17E00835FAA /* Crystal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crystal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,8 @@
 				2F9D92F11E72A17E00835FAA /* ViewController.swift */,
 				2FE6B9E11E752E8F009AF030 /* LoginVC.swift */,
 				2FE6B9E31E752EB7009AF030 /* RegisterVC.swift */,
+				2F31D0BB1E7FCB5600D247AB /* MemberVC.swift */,
+				2F1D1A501E8174BF007D270F /* LoadingVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,7 +173,7 @@
 				TargetAttributes = {
 					2F9D92EB1E72A17E00835FAA = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 328Y89B4S9;
+						DevelopmentTeam = 35YQ8TWVH3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9D92F21E72A17E00835FAA /* ViewController.swift in Sources */,
+				2F1D1A511E8174BF007D270F /* LoadingVC.swift in Sources */,
+				2F31D0BC1E7FCB5600D247AB /* MemberVC.swift in Sources */,
 				2FE6B9E41E752EB7009AF030 /* RegisterVC.swift in Sources */,
 				2F9D92F01E72A17E00835FAA /* AppDelegate.swift in Sources */,
 				2FE6B9E21E752E8F009AF030 /* LoginVC.swift in Sources */,
@@ -383,7 +391,7 @@
 			baseConfigurationReference = BF10AA1BE8315E19F027627E /* Pods-Crystal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 328Y89B4S9;
+				DEVELOPMENT_TEAM = 35YQ8TWVH3;
 				INFOPLIST_FILE = Crystal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -398,7 +406,7 @@
 			baseConfigurationReference = C0500CF9C6CBFD99B54D3C20 /* Pods-Crystal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 328Y89B4S9;
+				DEVELOPMENT_TEAM = 35YQ8TWVH3;
 				INFOPLIST_FILE = Crystal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

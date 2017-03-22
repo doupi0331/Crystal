@@ -17,6 +17,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var passConfirmTxt: UITextField!
     @IBOutlet weak var birthdateTxt: UITextField!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
     let datePicker = UIDatePicker()
     var data = [String : Any]()
@@ -43,6 +44,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func submitPressed(_ sender: Any) {
+        
+        spinner.hidesWhenStopped = true
+        spinner.center = view.center
+        view.addSubview(spinner)
+        spinner.stopAnimating()
         
         let firstName = firstNameTxt.text!
         let lastName = lastNameTxt.text!
@@ -81,6 +87,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
+        
+        OperationQueue.main.addOperation {
+            self.spinner.stopAnimating()
+        }
+        
         
     }
     
@@ -161,7 +172,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
                 }
                 
                 
-                print(json)
+                //print(json)
                 
                 completed()
         }

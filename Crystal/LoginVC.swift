@@ -84,17 +84,37 @@ class LoginVC: UIViewController {
                     }
                 }
                 
-                // get the id
+                // check data
                 guard let id = json["id"] as? String else {
                     print("Could not get id from JSON")
                     return
                 }
+                guard let phone = json["phone"] as? String else {
+                    print("Could not get phone from JSON")
+                    return
+                }
                 
-                //print("The id is: " + id)
+                guard let coin = json["coin"] as? Int else {
+                    print("Could not get coin from JSON")
+                    return
+                }
                 
-                // store member id
+                guard let firstName = json["first_name"] as? String else {
+                    print("Could not get firstName from JSON")
+                    return
+                }
+                
+                guard let lastName = json["last_name"] as? String else {
+                    print("Could not get lastName from JSON")
+                    return
+                }
+
+                
+                // store member
                 let userDefault = UserDefaults.standard
                 userDefault.setValue(id, forKey: "id")
+                
+                MEMBER = Member(firstName: firstName, lastName: lastName, phone: phone, coin: coin)
                 
                 completed()
         }

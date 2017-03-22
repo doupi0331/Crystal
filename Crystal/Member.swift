@@ -52,5 +52,15 @@ class Member {
         return _coin
     }
     
-
+    var fullName: String {
+        return "\(lastName)\(firstName)"
+    }
+    
+    init(firstName: String, lastName: String, phone: String, coin: Int) {
+        self._firstName = firstName
+        self._lastName = lastName
+        self._phone = phone
+        self._coin = coin
+    }
+    
 }

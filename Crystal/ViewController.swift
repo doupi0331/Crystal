@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,19 +24,22 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.viewDidAppear(animated)
-        
         let userDefault = UserDefaults.standard
         let id = userDefault.string(forKey: "id")
-        if id == nil || id == "" {
+        if id == nil || id! == "" {
             self.performSegue(withIdentifier: "loginView", sender: self)
+        } else if MEMBER == nil{
+            self.performSegue(withIdentifier: "loadingView", sender: self)
         }
     }
     
     @IBAction func logoutPressed(_ sender: Any) {
         let userDefault = UserDefaults.standard
         userDefault.setValue("", forKey: "id")
+        MEMBER = nil
         self.performSegue(withIdentifier: "loginView", sender: self)
     }
 
+    
 }
 
