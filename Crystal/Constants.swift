@@ -11,16 +11,20 @@ import UIKit
 typealias ApiComplete = () -> ()
 
 var MEMBER: Member!
+var TRADES = [Trade]()
 
 let URL_BASE = "https://crystal-app.herokuapp.com/api/v1/"
 
 // models
 let URL_MEMBER = "members/"
+let URL_TRADE = "trades/"
 
 // Resful URL
 let URL_SINGUP = "\(URL_BASE)\(URL_MEMBER)"
 let URL_LOGIN = "\(URL_BASE)login/"
 let URL_SHOW_MEMBER = "\(URL_BASE)\(URL_MEMBER)"
+let URL_SHOW_TRADES = "\(URL_BASE)\(URL_MEMBER)\(URL_TRADE)"
+let URL_TRADE_DETAIL = "\(URL_BASE)\(URL_TRADE)"
 
 
 // function

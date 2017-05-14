@@ -24,17 +24,12 @@ class MemberVC: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if MEMBER != nil {
             self.nameLabel.text = MEMBER.fullName
             self.phoneLabel.text = MEMBER.phone
             self.coinLabel.text = MEMBER.coin.stringFormattedWithSeparator
-            self.nameLabel.isHidden = false
-            self.phoneLabel.isHidden = false
-            self.coinLabel.isHidden = false
         }
     }
-    
-    
 
 }

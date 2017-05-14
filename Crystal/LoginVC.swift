@@ -116,6 +116,40 @@ class LoginVC: UIViewController {
                 
                 MEMBER = Member(firstName: firstName, lastName: lastName, phone: phone, coin: coin)
                 
+                // get member trades
+                Alamofire.request("\(URL_SHOW_TRADES)\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default)
+                    .responseJSON { response in
+                        guard response.result.error == nil else {
+                            print("error calling POST")
+                            print(response.result.error!)
+                            return
+                        }
+                        
+                        // make sure we got some JSON since that's what we expect
+                        guard let json = response.result.value as? [String: Any] else {
+                            print("didn't get todo object as JSON from API")
+                            print("Error: \(response.result.error)")
+                            return
+                        }
+                        //print(json)
+                        
+                        guard let results = json["results"] as? [Dictionary<String,AnyObject>] else {
+                            print("Could not get results from JSON")
+                            return
+                        }
+                        
+                        //print("\(results.count)")
+                        
+                        // store member trades
+                        
+                        for trade in results {
+                            TRADES.append(Trade(tradeDict: trade))
+                        }
+                        
+                        completed()
+                }
+
+                
                 completed()
         }
         

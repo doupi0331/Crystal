@@ -22,8 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //self.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
         let userDefault = UserDefaults.standard
         let id = userDefault.string(forKey: "id")
         if id == nil || id! == "" {
@@ -37,6 +36,7 @@ class ViewController: UIViewController {
         let userDefault = UserDefaults.standard
         userDefault.setValue("", forKey: "id")
         MEMBER = nil
+        TRADES = []
         self.performSegue(withIdentifier: "loginView", sender: self)
     }
 
